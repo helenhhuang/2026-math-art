@@ -28,8 +28,10 @@ y_polar = r_polar * np.sin(theta)
 #ax.plot(x_polar, y_polar, color='red', alpha=0.5)
 
 # Formatting
+ax.set_yticks([])
+ax.set_xticks([])
 ax.set_aspect('equal', adjustable='box')
 ax.set_xlim(-1.2, 1.2)
 ax.set_ylim(-1.2, 1.2)
+plt.savefig("cool_circles.png")
 plt.show()
-fig.savefig("cool_circles.png")
