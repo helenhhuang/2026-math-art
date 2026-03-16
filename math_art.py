@@ -14,7 +14,8 @@ for value in range(1, 1000):
     x = np.cos((5*np.pi*value)/1000) * np.cos((np.pi * 3)/np.sin(value)) * common_factor
     y = np.sin((10*np.pi*value)/1000) * common_factor
 
-    circle = patches.Circle((x, y), radius=r, fill=False, color=(0.1, 0.5, 0.8), linewidth=0.1)
+    x = np.linspace(0, 4 * np.pi, 100)
+    circle = patches.Circle((x, y), radius=r, fill=False, color=(0.25, 0.3, np.sin(x)), linewidth=0.1)
     ax.add_patch(circle)
 
 # Part 2: Draw the polar-style curve
@@ -33,5 +34,5 @@ ax.set_xticks([])
 ax.set_aspect('equal', adjustable='box')
 ax.set_xlim(-1.2, 1.2)
 ax.set_ylim(-1.2, 1.2)
-plt.savefig("bubble_thingys.png")
+#plt.savefig("bubble_thingys.png")
 plt.show()
