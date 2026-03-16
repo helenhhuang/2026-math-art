@@ -11,7 +11,7 @@ for value in range(1, 1000):
     
     # Coordinates for the circle centers
     common_factor = 1 - (1/2) * (np.cos((6*np.pi*value)/1000))**2
-    x = np.cos((5*np.pi*value)/1000) * np.cos(np.pi * 3) * common_factor
+    x = np.cos((5*np.pi*value)/1000) * np.cos((np.pi * 3)/np.sin(value)) * common_factor
     y = np.sin((10*np.pi*value)/1000) * common_factor
 
     circle = patches.Circle((x, y), radius=r, fill=False, color=(0.1, 0.5, 0.8), linewidth=0.1)
@@ -33,5 +33,5 @@ ax.set_xticks([])
 ax.set_aspect('equal', adjustable='box')
 ax.set_xlim(-1.2, 1.2)
 ax.set_ylim(-1.2, 1.2)
-#plt.savefig("cool_circles.png")
+plt.savefig("bubble_thingys.png")
 plt.show()
